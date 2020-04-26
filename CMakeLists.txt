@@ -14,4 +14,4 @@ project(chip VERSION 1.0
         	DESCRIPTION "chip game engine"
 		LANGUAGES CXX)
 
-add_subdirectory(core)
+add_subdirectory(src/core)
