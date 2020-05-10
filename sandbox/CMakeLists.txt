@@ -10,17 +10,15 @@ if(EXISTS "${LOC_PATH}")
     message(FATAL_ERROR "You cannot build in a source directory (or any directory with a CMakeLists.txt file). Please make a build subdirectory. Feel free to remove CMakeCache.txt and CMakeFiles.")
 endif()
 
-project(chip VERSION 1.0
-        	DESCRIPTION "chip game engine"
+project(sandbox VERSION 1.0
+        	DESCRIPTION "sandbox"
 		LANGUAGES CXX)
 
-add_subdirectory(src/core)
+# add the engine library
+add_executable(sandbox src/main.cc)
 
-# add the executable
-add_executable(chip src/main.cc)
+find_library(CHIP_LIB chip HINTS "/usr/local/lib/chip")
+find_library(CORE_LIB core HINTS "/usr/local/lib/chip")
 
-target_link_libraries(chip PRIVATE core)
-
-target_include_directories(chip PUBLIC
-                          ${CMAKE_SOURCE_DIR}/include/
-                          )
+target_link_libraries(sandbox PUBLIC "${CHIP_LIB}")
+target_link_libraries(sandbox PUBLIC "${CORE_LIB}")
