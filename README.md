@@ -3,7 +3,7 @@
 Chip game engine.
 
 ## Dependencies
-Cmake >= 3.1
+- Cmake >= 3.1
 
 Install Engine:
 - ```cd engine/build```
