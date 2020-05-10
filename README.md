@@ -1,18 +1,18 @@
-#CHIP
+# CHIP
 
 Chip game engine.
 
 Install Engine:
-- cd engine/build
-- cmake ..
-- make
-- make install
+- ```cd engine/build```
+- ```cmake ..```
+- ```make```
+- ```make install```
 
 Install Sandbox Example:
-- cd sandbox/build
-- cmake ..
-- make
+- ```cd sandbox/build```
+- ```cmake ..```
+- ```make```
 
 Run Sandbox Example:
-- cd sandbox/build
-- ./sandbox
+- ```cd sandbox/build```
+- ```./sandbox```
