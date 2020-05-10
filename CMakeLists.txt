@@ -15,3 +15,12 @@ project(chip VERSION 1.0
 		LANGUAGES CXX)
 
 add_subdirectory(src/core)
+
+# add the executable
+add_executable(chip src/main.cc)
+
+target_link_libraries(chip PRIVATE core)
+
+target_include_directories(chip PUBLIC
+                          ${CMAKE_SOURCE_DIR}/include/
+                          )

@@ -1,7 +1,4 @@
-#include <iostream>
-
-int main()
+int returnFive()
 {
-	std::cout << "test, wow!" << std::endl;
-	return 0;
+	return 5;
 }
